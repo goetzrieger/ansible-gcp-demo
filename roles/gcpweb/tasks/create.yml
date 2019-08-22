@@ -2,6 +2,7 @@
 - name: create a network
   gcp_compute_network:
     name: ansible-network
+    metadata: {}
     auto_create_subnetworks: yes
     project: "{{ lookup('env','GCP_PROJECT') }}"
     state: present
