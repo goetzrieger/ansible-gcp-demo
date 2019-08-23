@@ -10,6 +10,8 @@
     name: ansible-network
     auto_create_subnetworks: yes
     project: "{{ lookup('env','GCP_PROJECT') }}"
+    auth_kind: "serviceaccount"
+    service_account_file: "{{ lookup('env','GCP_SERVICE_ACCOUNT_FILE') }}"
     state: present
   register: network
 
