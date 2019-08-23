@@ -1,4 +1,10 @@
 ---
+- shell: /usr/bin/printenv
+  register: result
+
+- debug:
+    var: result
+
 - name: create a network
   gcp_compute_network:
     name: ansible-network
