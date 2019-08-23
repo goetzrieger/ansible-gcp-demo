@@ -4,7 +4,7 @@
   gather_facts: no
   connection: local
   environment:
-    GCP_SERVICE_ACCOUNT_EMAIL: "{{ ansible_env.GCE_EMAIL }}"
+    GCP_SERVICE_ACCOUNT_EMAIL: "{{ lookup('env','GCE_EMAIL') }}"
     GCP_SCOPES: "https://www.googleapis.com/auth/compute"
 
   roles:
