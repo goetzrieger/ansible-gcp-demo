@@ -2,7 +2,7 @@
 - name: Create GCP webserver(s) resources
   hosts: localhost
   gather_facts: no
-  connection: local
+  #connection: local
   environment:
     #GCP_SERVICE_ACCOUNT_EMAIL: "{{ lookup('env','GCE_EMAIL') }}"
     #GCP_SCOPES: "https://www.googleapis.com/auth/compute"
